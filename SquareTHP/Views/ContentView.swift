@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var vm = ContentViewModel()
+    @State var selectedEmployee: Employee? = nil
     
     var body: some View {
         NavigationView {
@@ -16,11 +17,11 @@ struct ContentView: View {
                 ScrollView {
                     ForEach(vm.employees) { employee in
                         HStack {
-                            EmployeeCells(employee: employee)
+                            EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
                         }
-                        
                     }
                 }
+                .refreshable { }
             }
             .padding()
             .navigationTitle("Employees")

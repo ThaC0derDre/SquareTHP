@@ -14,13 +14,27 @@ class ImageViewModel: ObservableObject {
     @Published var isLoading = false
     var urlString : String
     var cancellables = Set<AnyCancellable>()
+    let cache = ImageCacheManager.instance
     
     init(urlString: String){
         self.urlString = urlString
-        downloadImages()
+        getImage()
+    }
+    
+    func getImage() {
+        if let cachedImage = cache.get(name: urlString) {
+            image = cachedImage
+            print("Getting Images")
+        } else {
+            downloadImages()
+            
+            print("Downloading Image")
+        }
+        
     }
     
     func downloadImages() {
+        
         isLoading = true
         
         guard let url = URL(string: urlString) else {
@@ -29,14 +43,18 @@ class ImageViewModel: ObservableObject {
         }
         
         URLSession.shared.dataTaskPublisher(for: url)
-            .map { UIImage(data: $0.data)}
+            .map { UIImage(data: $0.data) }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.isLoading = false
             } receiveValue: { [weak self]  receivedImage in
-                self?.image = receivedImage
+                guard
+                    let self = self,
+                    let unwrappedImage = receivedImage else { return }
+                
+                self.image = receivedImage
+                self.cache.add(image: unwrappedImage, name: self.urlString)
             }
             .store(in: &cancellables)
     }
-    
 }

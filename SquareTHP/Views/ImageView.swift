@@ -23,7 +23,6 @@ struct ImageView: View {
                     .resizable()
                     .clipShape(Circle())
                     .scaledToFill()
-                    .frame(width: 75, height: 75)
             } else {
                 placeHolderImage()
             }
