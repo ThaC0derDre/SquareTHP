@@ -15,14 +15,14 @@ struct ImageView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack {
             if vm.isLoading {
                 ProgressView()
             } else if let image = vm.image {
                 Image(uiImage: image)
                     .resizable()
-                    .clipShape(Circle())
                     .scaledToFill()
+                    .clipShape(Circle())
             } else {
                 placeHolderImage()
             }

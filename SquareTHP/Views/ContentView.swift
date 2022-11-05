@@ -13,19 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                ScrollView {
-                    ForEach(vm.employees) { employee in
-                        HStack {
-                            EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
-                        }
-                    }
-                }
-                .refreshable { }
+            List(vm.employees) { employee in
+                    EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
             }
-            .padding()
             .navigationTitle("Employees")
         }
+        .refreshable { }
     }
 }
 

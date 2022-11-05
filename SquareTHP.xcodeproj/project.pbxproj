@@ -17,7 +17,6 @@
 		31EEE96E2916DD1B00DF92E3 /* EmployeeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE96D2916DD1B00DF92E3 /* EmployeeCells.swift */; };
 		31EEE9702916DE8600DF92E3 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE96F2916DE8600DF92E3 /* ImageView.swift */; };
 		31EEE9722916DF3300DF92E3 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9712916DF3300DF92E3 /* ImageViewModel.swift */; };
-		31EEE9742916DF8100DF92E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9732916DF8100DF92E3 /* ImageDownloader.swift */; };
 		31EEE9762916F49C00DF92E3 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		31EEE96D2916DD1B00DF92E3 /* EmployeeCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCells.swift; sourceTree = "<group>"; };
 		31EEE96F2916DE8600DF92E3 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		31EEE9712916DF3300DF92E3 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
-		31EEE9732916DF8100DF92E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				31EEE9682916CDE500DF92E3 /* EmployeeDownloader.swift */,
-				31EEE9732916DF8100DF92E3 /* ImageDownloader.swift */,
 				31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */,
 			);
 			path = Utilities;
@@ -201,7 +198,6 @@
 				31EEE9552916CBB100DF92E3 /* SquareTHPApp.swift in Sources */,
 				31EEE9702916DE8600DF92E3 /* ImageView.swift in Sources */,
 				31EEE9722916DF3300DF92E3 /* ImageViewModel.swift in Sources */,
-				31EEE9742916DF8100DF92E3 /* ImageDownloader.swift in Sources */,
 				31EEE96C2916CE3E00DF92E3 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

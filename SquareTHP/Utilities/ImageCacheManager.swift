@@ -22,7 +22,6 @@ class ImageCacheManager {
     
     func add(image: UIImage, name: String) {
         cache.setObject(image, forKey: name as NSString)
-        print("Saving Image")
     }
     
     func get(name: String) -> UIImage? {
