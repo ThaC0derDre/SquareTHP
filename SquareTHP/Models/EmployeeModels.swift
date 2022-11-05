@@ -23,4 +23,6 @@ struct Employee: Codable, Identifiable {
     }
     
     let id, name, number, email, bio, photo, team : String
+    
+    static let sampleEmployee = Employee(id: UUID().uuidString, name: "Andres Gutierrez", number: "760 338-5384", email: "c0dingw.dre@gmail.com", bio: "Self-taught Dev who immediately began creating apps for companies withing the security industry. Goes by Dre", photo: "https://s3.amazonaws.com/sq-mobile-interview/photos/16c00560-6dd3-4af4-97a6-d4754e7f2394/small.jpg", team: "iOS Dev")
 }

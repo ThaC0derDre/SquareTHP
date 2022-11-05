@@ -14,14 +14,14 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 ScrollView {
-                    ForEach(vm.employees) { emp in
+                    ForEach(vm.employees) { employee in
                         HStack {
                             Circle()
                                 .frame(width: 75, height: 75)
                             VStack(alignment: .leading) {
-                                Text(emp.name)
+                                Text(employee.name)
                                     .font(.headline)
-                                Text(emp.team)
+                                Text(employee.team)
                                     .foregroundColor(.gray)
                                     .italic()
                             }
