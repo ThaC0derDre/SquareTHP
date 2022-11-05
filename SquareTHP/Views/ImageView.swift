@@ -15,15 +15,17 @@ struct ImageView: View {
     }
     
     var body: some View {
-        ZStack {
+        VStack {
             if vm.isLoading {
                 ProgressView()
             } else if let image = vm.image {
                 Image(uiImage: image)
                     .resizable()
-                    .frame(width: 75, height: 75)
                     .clipShape(Circle())
-                
+                    .scaledToFill()
+                    .frame(width: 75, height: 75)
+            } else {
+                placeHolderImage()
             }
         }
     }
@@ -34,5 +36,23 @@ struct ImageView_Previews: PreviewProvider {
         ImageView(urlString: "https://s3.amazonaws.com/sq-mobile-interview/photos/16c00560-6dd3-4af4-97a6-d4754e7f2394/small.jpg")
             .frame(width: 75, height: 75)
             .previewLayout(.sizeThatFits)
+    }
+}
+
+extension ImageView {
+    private func placeHolderImage()  -> some View {
+        ZStack{
+            Circle()
+                .overlay(Circle()
+                    .stroke()
+                    .background(.gray))
+                .clipShape(Circle())
+                .frame(width: 75, height: 75)
+            Image(systemName: "person.fill")
+                .resizable()
+                .padding()
+                .clipShape(Circle())
+                .frame(width: 75, height: 75)
+        }
     }
 }

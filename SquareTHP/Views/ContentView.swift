@@ -16,16 +16,7 @@ struct ContentView: View {
                 ScrollView {
                     ForEach(vm.employees) { employee in
                         HStack {
-                            Circle()
-                                .frame(width: 75, height: 75)
-                            VStack(alignment: .leading) {
-                                Text(employee.name)
-                                    .font(.headline)
-                                Text(employee.team)
-                                    .foregroundColor(.gray)
-                                    .italic()
-                            }
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                            EmployeeCells(employee: employee)
                         }
                         
                     }

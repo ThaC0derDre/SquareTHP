@@ -13,7 +13,7 @@ struct EmployeeCells: View {
     
     var body: some View {
         HStack {
-            ImageView(urlString: employee.photo)
+            ImageView(urlString: employee.photo ?? "n/a")
             VStack(alignment: .leading) {
                 Text(employee.name)
                     .font(.headline)
@@ -29,6 +29,5 @@ struct EmployeeCells: View {
 struct EmployeeCells_Previews: PreviewProvider {
     static var previews: some View {
         EmployeeCells(employee: Employee.sampleEmployee)
-            .padding()
     }
 }
