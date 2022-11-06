@@ -18,6 +18,7 @@
 		31EEE9702916DE8600DF92E3 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE96F2916DE8600DF92E3 /* ImageView.swift */; };
 		31EEE9722916DF3300DF92E3 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9712916DF3300DF92E3 /* ImageViewModel.swift */; };
 		31EEE9762916F49C00DF92E3 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */; };
+		31EEE97B291769D600DF92E3 /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE97A291769D600DF92E3 /* String-Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		31EEE96F2916DE8600DF92E3 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		31EEE9712916DF3300DF92E3 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		31EEE97A291769D600DF92E3 /* String-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		31EEE9532916CBB100DF92E3 /* SquareTHP */ = {
 			isa = PBXGroup;
 			children = (
+				31EEE979291769BB00DF92E3 /* Extensions */,
 				31EEE96A2916CDFD00DF92E3 /* Utilities */,
 				31EEE9652916CC2300DF92E3 /* Models */,
 				31EEE9642916CC1A00DF92E3 /* ViewModels */,
@@ -118,6 +121,14 @@
 				31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		31EEE979291769BB00DF92E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31EEE97A291769D600DF92E3 /* String-Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			files = (
 				31EEE9672916CC8C00DF92E3 /* EmployeeModels.swift in Sources */,
 				31EEE96E2916DD1B00DF92E3 /* EmployeeCells.swift in Sources */,
+				31EEE97B291769D600DF92E3 /* String-Ext.swift in Sources */,
 				31EEE9572916CBB100DF92E3 /* ContentView.swift in Sources */,
 				31EEE9692916CDE500DF92E3 /* EmployeeDownloader.swift in Sources */,
 				31EEE9762916F49C00DF92E3 /* ImageCacheManager.swift in Sources */,

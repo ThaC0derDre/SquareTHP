@@ -13,7 +13,8 @@ class EmployeeDownloader {
     static let instance = EmployeeDownloader()
     
     @Published var employeeArray = [Employee]()
-    private var urlString = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+    private var urlString = "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json"
+    //"https://s3.amazonaws.com/sq-mobile-interview/employees.json"
     var cancellables = Set<AnyCancellable>()
     
     private init() {
@@ -34,6 +35,7 @@ class EmployeeDownloader {
                 case .finished :
                     break
                 case.failure(let error):
+                    
                     print("Error downloading data \(error)")
                 }
             } receiveValue: { [weak self] returnedStaff in

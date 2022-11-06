@@ -37,7 +37,7 @@ extension EmployeeCells {
     private var collapsedView: some View {
         HStack {
             ImageView(urlString: employee.photo ?? "n/a")
-                .matchedGeometryEffect(id: "\(employee.id)'s image", in: profileView)
+//                .matchedGeometryEffect(id: "\(employee.id)'s image", in: profileView)
                 .frame(width: 75, height: 75)
             VStack(alignment: .leading) {
                 Text(employee.name)
@@ -54,7 +54,7 @@ extension EmployeeCells {
     private var expandedView: some View {
         VStack {
             ImageView(urlString: employee.photo ?? "n/a")
-                .matchedGeometryEffect(id: "\(employee.id)'s image", in: profileView)
+//                .matchedGeometryEffect(id: "\(employee.id)'s image", in: profileView)
                 .frame(width: 150, height: 150)
             Text(employee.name)
                 .fontWeight(.heavy)
@@ -65,7 +65,8 @@ extension EmployeeCells {
             VStack(alignment: .leading) {
                 if let bio = employee.bio {
                     Text("BIO")
-                        .fontWeight(.light)
+                        .fontWeight(.bold)
+                        .underline()
                         .padding(.bottom, 2)
                     
                     Text(bio)
@@ -73,20 +74,24 @@ extension EmployeeCells {
                 }
                 
                 Text("CONTACT")
-                    .fontWeight(.light)
+                    .fontWeight(.bold)
+                    .underline()
                     .padding(.bottom, 2)
                 
                 
                 HStack{
-                    Text("Email :")
+                    Text("Email:")
                         .fontWeight(.semibold)
                     Text(employee.email)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                        
                 }
                 HStack {
                     if let number = employee.number {
                         Text("Phone Number:")
                             .fontWeight(.semibold)
-                        Text(number)
+                        Text(number.asPhoneNumber())
                     }
                 }
             }
