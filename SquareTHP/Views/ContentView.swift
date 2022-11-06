@@ -20,7 +20,6 @@ struct ContentView: View {
             }
         }
         .refreshable { vm.dataService.downloadEmployees() }
-        
     }
 }
 
@@ -37,10 +36,14 @@ extension ContentView {
         }
         .navigationTitle("Employees")
     }
-        private var emptyState: some View {
-            Text("So Empty")
-            .alert("Oh no..", isPresented: $vm.showAlert, actions: { }, message: {
-                Text(vm.errorMessage?.rawValue ?? "An Error has occured. Please try again")
-            })
-        }
+    
+    
+    private var emptyState: some View {
+            EmptyPageView()
+                .frame(width: 300, height: 300, alignment: .center)
+                .alert("Oh no..", isPresented: $vm.showAlert, actions: {}, message: {
+                    Text(vm.errorMessage?.rawValue ?? "An Error has occured. Please try again")
+                })
+                .navigationTitle("No Employees")
+    }
 }
