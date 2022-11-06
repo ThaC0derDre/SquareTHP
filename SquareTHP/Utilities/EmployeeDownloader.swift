@@ -13,8 +13,9 @@ class EmployeeDownloader {
     static let instance = EmployeeDownloader()
     
     @Published var employeeArray = [Employee]()
-    private var urlString = "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json"
-    //"https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+    private var urlString = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+    private var badString = "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json"
+    
     var cancellables = Set<AnyCancellable>()
     
     private init() {

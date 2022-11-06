@@ -27,11 +27,9 @@ class ImageViewModel: ObservableObject {
         } else {
             downloadImages()
         }
-        
     }
     
     func downloadImages() {
-        
         isLoading = true
         
         guard let url = URL(string: urlString) else {

@@ -22,7 +22,7 @@ class ContentViewModel: ObservableObject {
     func addSubcribers() {
         dataService.$employeeArray
             .sink { [weak self] returnedEmployees in
-                self?.employees = returnedEmployees
+                self?.employees = returnedEmployees.sorted()
             }
             .store(in: &cancellables)
     }
