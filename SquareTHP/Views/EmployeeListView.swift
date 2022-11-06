@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EmployeeListView.swift
 //  SquareTHP
 //
 //  Created by Andres Gutierrez on 11/5/22.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject var vm = ContentViewModel()
+struct EmployeeListView: View {
+    @StateObject var vm = EmployeeListViewModel()
     @State var selectedEmployee: Employee? = nil
     
     var body: some View {
@@ -25,11 +25,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        EmployeeListView()
     }
 }
 
-extension ContentView {
+extension EmployeeListView {
     private var employeeList: some View {
         ScrollViewReader { proxy in
             List(vm.employees) { employee in

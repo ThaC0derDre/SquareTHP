@@ -11,7 +11,7 @@ import SwiftUI
 struct SquareTHPApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmployeeListView()
         }
     }
 }
