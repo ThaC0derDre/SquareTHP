@@ -27,7 +27,7 @@ class EmployeeDownloader {
     
     
     func downloadEmployees() {
-        guard let url = URL(string: emptyUrl) else {
+        guard let url = URL(string: urlString) else {
             showAlert = true
             errorMessage = .invaildURL
             
@@ -47,7 +47,7 @@ class EmployeeDownloader {
                 case .failure(let error):
                     self.showAlert = true
                     self.errorMessage = .invaildData
-                    print("Error downloading data \(error.localizedDescription)")
+                    print("Error downloading data: \(error.localizedDescription)")
                 }
             } receiveValue: { [weak self] returnedStaff in
                 guard let self = self else { return }

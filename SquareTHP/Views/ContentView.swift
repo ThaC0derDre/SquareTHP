@@ -31,8 +31,11 @@ struct ContentView_Previews: PreviewProvider {
 
 extension ContentView {
     private var employeeList: some View {
-        List(vm.employees) { employee in
-            EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
+        ScrollViewReader { proxy in
+            List(vm.employees) { employee in
+                EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
+            }
+            
         }
         .navigationTitle("Employees")
     }
@@ -44,6 +47,6 @@ extension ContentView {
                 .alert("Oh no..", isPresented: $vm.showAlert, actions: {}, message: {
                     Text(vm.errorMessage?.rawValue ?? "An Error has occured. Please try again")
                 })
-                .navigationTitle("No Employees")
+                .navigationTitle("← No Employees")
     }
 }

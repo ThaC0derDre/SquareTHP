@@ -11,7 +11,7 @@ struct Staff: Codable {
     let employees: [Employee]
 }
 
-struct Employee: Codable, Identifiable, Comparable {
+struct Employee: Codable, Identifiable, Comparable, Hashable {
     enum CodingKeys: String, CodingKey {
         case id     = "uuid"
         case name   = "full_name"

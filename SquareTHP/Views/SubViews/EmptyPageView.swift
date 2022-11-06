@@ -9,7 +9,6 @@ import SwiftUI
 import Lottie
 
 struct EmptyPageView: UIViewRepresentable {
-    
     func makeUIView(context: Context) -> some UIView {
         
         let view = UIView(frame: .zero)
@@ -31,7 +30,5 @@ struct EmptyPageView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        
-    }
+    func updateUIView(_ uiView: UIViewType, context: Context) { }
 }

@@ -27,18 +27,12 @@ struct EmployeeCells: View {
     }
 }
 
-//struct EmployeeCells_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EmployeeCells(selectedEmployee: _, employee: Employee.sampleEmployee)
-//    }
-//}
 
 extension EmployeeCells {
     private var collapsedView: some View {
         HStack {
-            ImageView(urlString: employee.photo ?? "n/a")
-//                .matchedGeometryEffect(id: "\(employee.id)'s image", in: profileView)
-                .frame(width: 75, height: 75)
+                ImageView(urlString: employee.photo ?? "n/a")
+            .frame(width: 75, height: 75)
             VStack(alignment: .leading) {
                 Text(employee.name)
                     .font(.headline)
@@ -47,14 +41,18 @@ extension EmployeeCells {
                     .italic()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            VStack {
+                Spacer()
+                Image(systemName: "chevron.down")
+                    .padding(.bottom, 2)
+            }
         }
         .onTapGesture(perform: selectOrDeselect)
     }
     
     private var expandedView: some View {
         VStack {
-            ImageView(urlString: employee.photo ?? "n/a")
-//                .matchedGeometryEffect(id: "\(employee.id)'s image", in: profileView)
+                ImageView(urlString: employee.photo ?? "n/a")
                 .frame(width: 150, height: 150)
             Text(employee.name)
                 .fontWeight(.heavy)

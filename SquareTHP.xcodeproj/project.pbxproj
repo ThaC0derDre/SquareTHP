@@ -99,10 +99,8 @@
 		31EEE9632916CC1100DF92E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				31EEE98529182D7600DF92E3 /* SubViews */,
 				31EEE9562916CBB100DF92E3 /* ContentView.swift */,
-				31EEE98129181DF700DF92E3 /* EmptyPageView.swift */,
-				31EEE96D2916DD1B00DF92E3 /* EmployeeCells.swift */,
-				31EEE96F2916DE8600DF92E3 /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +138,16 @@
 				31EEE97A291769D600DF92E3 /* String-Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31EEE98529182D7600DF92E3 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				31EEE98129181DF700DF92E3 /* EmptyPageView.swift */,
+				31EEE96D2916DD1B00DF92E3 /* EmployeeCells.swift */,
+				31EEE96F2916DE8600DF92E3 /* ImageView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
