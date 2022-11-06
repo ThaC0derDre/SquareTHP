@@ -13,12 +13,14 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(vm.employees) { employee in
-                    EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
+            if vm.employees.isEmpty {
+                emptyState
+            }else {
+                employeeList
             }
-            .navigationTitle("Employees")
         }
         .refreshable { vm.dataService.downloadEmployees() }
+        
     }
 }
 
@@ -26,4 +28,19 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension ContentView {
+    private var employeeList: some View {
+        List(vm.employees) { employee in
+            EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
+        }
+        .navigationTitle("Employees")
+    }
+        private var emptyState: some View {
+            Text("So Empty")
+            .alert("Oh no..", isPresented: $vm.showAlert, actions: { }, message: {
+                Text(vm.errorMessage?.rawValue ?? "An Error has occured. Please try again")
+            })
+        }
 }

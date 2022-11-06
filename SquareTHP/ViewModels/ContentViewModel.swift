@@ -11,6 +11,8 @@ import Combine
 class ContentViewModel: ObservableObject {
     
     @Published var employees = [Employee]()
+    @Published var showAlert = false
+    @Published var errorMessage: ErrorMessage?
     
     let dataService = EmployeeDownloader.instance
     var cancellables = Set<AnyCancellable>()
@@ -23,6 +25,18 @@ class ContentViewModel: ObservableObject {
         dataService.$employeeArray
             .sink { [weak self] returnedEmployees in
                 self?.employees = returnedEmployees.sorted()
+            }
+            .store(in: &cancellables)
+        
+        dataService.$showAlert
+            .sink { [weak self] returnedBool in
+                self?.showAlert = returnedBool
+            }
+            .store(in: &cancellables)
+        
+        dataService.$errorMessage
+            .sink { [weak self] returnedMessage in
+                self?.errorMessage = returnedMessage
             }
             .store(in: &cancellables)
     }

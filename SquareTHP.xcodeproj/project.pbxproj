@@ -19,6 +19,7 @@
 		31EEE9722916DF3300DF92E3 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9712916DF3300DF92E3 /* ImageViewModel.swift */; };
 		31EEE9762916F49C00DF92E3 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */; };
 		31EEE97B291769D600DF92E3 /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE97A291769D600DF92E3 /* String-Ext.swift */; };
+		31EEE97D291803D000DF92E3 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE97C291803D000DF92E3 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		31EEE9712916DF3300DF92E3 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		31EEE97A291769D600DF92E3 /* String-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Ext.swift"; sourceTree = "<group>"; };
+		31EEE97C291803D000DF92E3 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				31EEE9682916CDE500DF92E3 /* EmployeeDownloader.swift */,
 				31EEE9752916F49C00DF92E3 /* ImageCacheManager.swift */,
+				31EEE97C291803D000DF92E3 /* ErrorMessage.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				31EEE9572916CBB100DF92E3 /* ContentView.swift in Sources */,
 				31EEE9692916CDE500DF92E3 /* EmployeeDownloader.swift in Sources */,
 				31EEE9762916F49C00DF92E3 /* ImageCacheManager.swift in Sources */,
+				31EEE97D291803D000DF92E3 /* ErrorMessage.swift in Sources */,
 				31EEE9552916CBB100DF92E3 /* SquareTHPApp.swift in Sources */,
 				31EEE9702916DE8600DF92E3 /* ImageView.swift in Sources */,
 				31EEE9722916DF3300DF92E3 /* ImageViewModel.swift in Sources */,
