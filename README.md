@@ -23,7 +23,7 @@
 - And lastly, I didn't like the new funtionality with pulling down to refresh. The nav title jumps up, but because user is holding on to scrollView, the scroll view stays.
 
  **UPDATE**
-I ended up fixing the all of the problems! 🍾
+I ended up fixing all of the problems! 🍾
     The desired effects didn't play well with Swift's "List". Had to ditch it!
     Also occured to me why the scrollView was remaining on the view during reload.
 
