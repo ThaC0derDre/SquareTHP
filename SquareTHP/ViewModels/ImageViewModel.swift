@@ -11,8 +11,8 @@ import Combine
 class ImageViewModel: ObservableObject {
     
     @Published var image: UIImage? = nil
-    @Published var isLoading = false
-    var urlString : String
+    @Published var isLoading: Bool = false
+    var urlString: String
     var cancellables = Set<AnyCancellable>()
     let cache = ImageCacheManager.instance
     

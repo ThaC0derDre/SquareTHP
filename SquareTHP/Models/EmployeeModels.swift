@@ -26,6 +26,9 @@ struct Employee: Codable, Identifiable, Comparable, Hashable {
     let number, bio, photo: String?
     
     static func <(lhs: Employee, rhs: Employee) -> Bool {
+        if lhs.team == rhs.team {
+            return lhs.name < rhs.name
+        }
         return lhs.team < rhs.team
     }
     

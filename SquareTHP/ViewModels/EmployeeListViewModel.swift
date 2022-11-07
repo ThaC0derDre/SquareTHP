@@ -14,7 +14,7 @@ class EmployeeListViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var errorMessage: ErrorMessage?
     
-    let dataService = EmployeeDownloader.instance
+    let dataService  = EmployeeDownloader.instance
     var cancellables = Set<AnyCancellable>()
     
     init() {

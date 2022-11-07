@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31182002291879BD0067A2C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 31182001291879BD0067A2C1 /* README.md */; };
 		31EEE9552916CBB100DF92E3 /* SquareTHPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9542916CBB100DF92E3 /* SquareTHPApp.swift */; };
 		31EEE9572916CBB100DF92E3 /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EEE9562916CBB100DF92E3 /* EmployeeListView.swift */; };
 		31EEE9592916CBB300DF92E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EEE9582916CBB300DF92E3 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31182001291879BD0067A2C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31EEE9512916CBB100DF92E3 /* SquareTHP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareTHP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EEE9542916CBB100DF92E3 /* SquareTHPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTHPApp.swift; sourceTree = "<group>"; };
 		31EEE9562916CBB100DF92E3 /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
@@ -56,9 +58,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311820002918731D0067A2C1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				31EEE98329181F4F00DF92E3 /* empty-state.json */,
+				31EEE9582916CBB300DF92E3 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		31EEE9482916CBB100DF92E3 = {
 			isa = PBXGroup;
 			children = (
+				31182001291879BD0067A2C1 /* README.md */,
 				31EEE9532916CBB100DF92E3 /* SquareTHP */,
 				31EEE9522916CBB100DF92E3 /* Products */,
 			);
@@ -75,14 +87,13 @@
 		31EEE9532916CBB100DF92E3 /* SquareTHP */ = {
 			isa = PBXGroup;
 			children = (
+				31EEE9542916CBB100DF92E3 /* SquareTHPApp.swift */,
+				31EEE9632916CC1100DF92E3 /* Views */,
+				31EEE9642916CC1A00DF92E3 /* ViewModels */,
+				31EEE9652916CC2300DF92E3 /* Models */,
 				31EEE979291769BB00DF92E3 /* Extensions */,
 				31EEE96A2916CDFD00DF92E3 /* Utilities */,
-				31EEE9652916CC2300DF92E3 /* Models */,
-				31EEE9642916CC1A00DF92E3 /* ViewModels */,
-				31EEE9632916CC1100DF92E3 /* Views */,
-				31EEE9542916CBB100DF92E3 /* SquareTHPApp.swift */,
-				31EEE9582916CBB300DF92E3 /* Assets.xcassets */,
-				31EEE98329181F4F00DF92E3 /* empty-state.json */,
+				311820002918731D0067A2C1 /* SupportingFiles */,
 				31EEE95A2916CBB300DF92E3 /* Preview Content */,
 			);
 			path = SquareTHP;
@@ -143,9 +154,9 @@
 		31EEE98529182D7600DF92E3 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				31EEE98129181DF700DF92E3 /* EmptyPageView.swift */,
 				31EEE96D2916DD1B00DF92E3 /* EmployeeCells.swift */,
 				31EEE96F2916DE8600DF92E3 /* ImageView.swift */,
+				31EEE98129181DF700DF92E3 /* EmptyPageView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 			files = (
 				31EEE95C2916CBB300DF92E3 /* Preview Assets.xcassets in Resources */,
 				31EEE9592916CBB300DF92E3 /* Assets.xcassets in Resources */,
+				31182002291879BD0067A2C1 /* README.md in Resources */,
 				31EEE98429181F4F00DF92E3 /* empty-state.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

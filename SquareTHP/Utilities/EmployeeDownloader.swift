@@ -13,13 +13,14 @@ class EmployeeDownloader {
     static let instance = EmployeeDownloader()
     
     @Published var employeeArray = [Employee]()
-    @Published var showAlert = false
+    @Published var showAlert     = false
     @Published var errorMessage: ErrorMessage?
-    private var urlString = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
-    private var badUrl = "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json"
+    // DIFFERENT URL STRINGS HERE ↓
+    private var goodUrl  = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+    private var badUrl   = "https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json"
     private var emptyUrl = "https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json"
     
-    var cancellables = Set<AnyCancellable>()
+    var cancellables     = Set<AnyCancellable>()
     
     private init() {
         downloadEmployees()
@@ -27,11 +28,10 @@ class EmployeeDownloader {
     
     
     func downloadEmployees() {
-        guard let url = URL(string: urlString) else {
-            showAlert = true
+        //      CHANGE URL STRING HERE ↓
+        guard let url = URL(string: goodUrl) else {
+            showAlert    = true
             errorMessage = .invaildURL
-            
-            print(ErrorMessage.invaildURL)
             return
         }
         
@@ -45,7 +45,7 @@ class EmployeeDownloader {
                 case .finished :
                     break
                 case .failure(let error):
-                    self.showAlert = true
+                    self.showAlert    = true
                     self.errorMessage = .invaildData
                     print("Error downloading data: \(error.localizedDescription)")
                 }
@@ -53,7 +53,7 @@ class EmployeeDownloader {
                 guard let self = self else { return }
                 self.employeeArray = returnedStaff.employees
                 if self.employeeArray.isEmpty  {
-                    self.showAlert = true
+                    self.showAlert    = true
                     self.errorMessage = .emptyList
                 }
             }
@@ -63,7 +63,7 @@ class EmployeeDownloader {
     func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else {
-            showAlert = true
+            showAlert    = true
             errorMessage = .invalidResponse
             throw ErrorMessage.invalidResponse
         }

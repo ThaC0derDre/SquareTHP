@@ -32,13 +32,16 @@ extension EmployeeCells {
     private var collapsedView: some View {
         HStack {
                 ImageView(urlString: employee.photo ?? "n/a")
+                .matchedGeometryEffect(id: employee.id, in: profileView)
             .frame(width: 75, height: 75)
             VStack(alignment: .leading) {
                 Text(employee.name)
                     .font(.headline)
+                    .matchedGeometryEffect(id: employee.name, in: profileView)
                 Text(employee.team)
                     .foregroundColor(.gray)
                     .italic()
+                    .matchedGeometryEffect(id: employee.team, in: profileView)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             VStack {
@@ -53,12 +56,15 @@ extension EmployeeCells {
     private var expandedView: some View {
         VStack {
                 ImageView(urlString: employee.photo ?? "n/a")
+                .matchedGeometryEffect(id: employee.id, in: profileView)
                 .frame(width: 150, height: 150)
             Text(employee.name)
-                .fontWeight(.heavy)
+                .font(.headline)
+                .matchedGeometryEffect(id: employee.name, in: profileView)
             Text(employee.team)
                 .foregroundColor(.gray)
                 .italic()
+                .matchedGeometryEffect(id: employee.team, in: profileView)
             
             VStack(alignment: .leading) {
                 if let bio = employee.bio {
@@ -93,7 +99,8 @@ extension EmployeeCells {
                     }
                 }
             }
-            .padding(.vertical)
+            .frame(maxWidth: .infinity)
+//            .padding(.vertical)
         }
         .onTapGesture(perform: selectOrDeselect)
         

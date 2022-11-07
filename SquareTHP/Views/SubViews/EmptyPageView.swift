@@ -16,7 +16,7 @@ struct EmptyPageView: UIViewRepresentable {
         let lottieAnimationView = LottieAnimationView(name: "empty-state", bundle: Bundle.main)
         
         lottieAnimationView.contentMode = .scaleAspectFit
-        lottieAnimationView.loopMode = .loop
+        lottieAnimationView.loopMode    = .loop
         lottieAnimationView.play()
         
         lottieAnimationView.translatesAutoresizingMaskIntoConstraints = false

@@ -31,13 +31,21 @@ struct ContentView_Previews: PreviewProvider {
 
 extension EmployeeListView {
     private var employeeList: some View {
-        ScrollViewReader { proxy in
-            List(vm.employees) { employee in
-                EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
+        ScrollView {
+            ScrollViewReader { proxy in
+                ForEach(vm.employees) { employee in
+                    EmployeeCells(selectedEmployee: $selectedEmployee, employee: employee)
+                        .padding()
+                        .id(employee)
+                }
+                .onChange(of: selectedEmployee, perform: { emp in
+                    withAnimation {
+                        proxy.scrollTo(emp)
+                    }
+                })
             }
-            
         }
-        .navigationTitle("Employees")
+        .navigationTitle("Our Team")
     }
     
     
