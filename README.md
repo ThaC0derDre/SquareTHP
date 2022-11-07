@@ -1,6 +1,7 @@
 
-#SquareTHP (Take Home Project)
-by Andres Gutierrez
+# SquareTHP (Take Home Project)
+
+![View of Team-2](https://user-images.githubusercontent.com/94762769/200207781-a9c32a02-ff46-41dc-80d6-02c953b9c8c1.jpg)
 
 ## Build tools & versions used
 - Xcode (14.0)
