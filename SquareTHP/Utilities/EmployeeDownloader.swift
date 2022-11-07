@@ -28,6 +28,7 @@ class EmployeeDownloader {
     
     
     func downloadEmployees() {
+        employeeArray.removeAll()
         //      CHANGE URL STRING HERE ↓
         guard let url = URL(string: goodUrl) else {
             showAlert    = true

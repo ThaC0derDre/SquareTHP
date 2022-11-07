@@ -11,7 +11,7 @@
 - Pick simulator and hit run for app working with correct JSON url.
 - To change url, hit (cmd + shift + o) and enter "EmployeeDownloader"
         or, navigate to it: SquareTHP/SquareTHP/Utilities/EmployeeDownloader,
-        Then, on line 32 change "goodUrl" to "badUrl" or "emptyUrl"
+        Then, on line 33 change "goodUrl" to "badUrl" or "emptyUrl"
         
 ## What areas of the app did you focus on?
 - On UI, however ran into some issues getting the effect I was attempting 😅
@@ -22,8 +22,9 @@
 - And lastly, I didn't like the new funtionality with pulling down to refresh. The nav title jumps up, but because user is holding on to scrollView, the scroll view stays.
 
  **UPDATE**
-I ended up fixing the first two problems! 🍾
+I ended up fixing the all of the problems! 🍾
     The desired effects didn't play well with Swift's "List". Had to ditch it!
+    Also occured to me why the scrollView was remaining on the view during reload.
 
 ## How long did you spend on this project?
 - About 5 - 6 hours, trying do solve those two problems had me go over the desired time.

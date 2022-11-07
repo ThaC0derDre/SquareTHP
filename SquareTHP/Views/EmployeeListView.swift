@@ -20,6 +20,7 @@ struct EmployeeListView: View {
             }
         }
         .refreshable { vm.dataService.downloadEmployees() }
+        .navigationViewStyle(.stack)
     }
 }
 
