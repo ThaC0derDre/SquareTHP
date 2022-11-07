@@ -5,6 +5,7 @@
 
 ## Build tools & versions used
 - Xcode (14.0)
+- iOS 15 and later
 - SwiftUI
 
 ## Steps to run the app
