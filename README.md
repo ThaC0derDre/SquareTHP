@@ -44,3 +44,4 @@ I ended up fixing all of the problems! 🍾
 ## Is there any other information you’d like us to know?
 - I did initially learn UIKit, but I had jumped to SwiftUI early 2022, and that has been my focus as it produces results much faster and I believe may be the future.
 - I'm incredibly thankful for the opportunity and for the challenge! 
+- Focus was on iPhone, iPad is supported
